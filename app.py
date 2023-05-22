@@ -2,11 +2,11 @@ from flask import Flask, jsonify, request
 import mysql.connector
 
 app = Flask(__name__)
-db = mysql.connector.connect(host='aws.connect.psdb.cloud',
+db = mysql.connector.connect(host='containers-us-west-190.railway.app',
+                             port='6965',
                             database='teste',
-                            user='22exuwbdbnylf1se8kik',
-                            password='pscale_pw_cbEg1xGHNTK3kL6IydReT1wkt5u71meRCGv4A52OGEz'
-)
+                            user='root',
+                            password='lFxPcsD7VYVQiwYX1Fai')
 
 @app.route('/api/registros', methods=['GET'])
 def obtener_registros():
